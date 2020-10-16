@@ -52,13 +52,13 @@ public class Tp1 {
                         System.out.println("Digite novamente");
                     } else {
                         if (goRet % 2 == 0) {
-                            if (source[i] == 'N' || source[j] == 'N') {
+                            if (source[i] == '-' || source[j] == '-') {
                                 i = 7;
                                 j = 7;
                                 System.out.println("Digite novamente, escolha de posicao sem ngm");
                             }
                         } else {
-                            if (destiny[i] == 'N' || destiny[j] == 'N') {
+                            if (destiny[i] == '-' || destiny[j] == '-') {
                                 i = 7;
                                 j = 7;
                                 System.out.println("Digite novamente, escolha de posicao sem ngm");
@@ -93,7 +93,7 @@ public class Tp1 {
                     nCanibalSource--;
                     nCanibalDestiny++;
                 }
-                source[i] = 'N';
+                source[i] = '-';
                 
             } else {
                 destiny[i] = source[i];
@@ -105,7 +105,7 @@ public class Tp1 {
                     nCanibalSource--;
                     nCanibalDestiny++;
                 }
-                source[i] = 'N';
+                source[i] = '-';
                 destiny[j] = source[j];
                 if(source[j] == 'M'){
                     nMissionarioSource--;
@@ -115,7 +115,7 @@ public class Tp1 {
                     nCanibalSource--;
                     nCanibalDestiny++;
                 }
-                source[j] = 'N';
+                source[j] = '-';
             }
         } else {
             if (i == j) {
@@ -128,7 +128,7 @@ public class Tp1 {
                     nCanibalDestiny--;
                     nCanibalSource++;
                 }
-                destiny[i] = 'N';
+                destiny[i] = '-';
             } else {
                 source[i] = destiny[i];
                 if(destiny[i] == 'M'){
@@ -139,7 +139,7 @@ public class Tp1 {
                     nCanibalDestiny--;
                     nCanibalSource++;
                 }
-                destiny[i] = 'N';
+                destiny[i] = '-';
                 source[j] = destiny[j];
                 if(destiny[j] == 'M'){
                     nMissionarioDestiny--;
@@ -149,7 +149,7 @@ public class Tp1 {
                     nCanibalDestiny--;
                     nCanibalSource++;
                 }
-                destiny[j] = 'N';
+                destiny[j] = '-';
             }
         }
     }
@@ -198,7 +198,7 @@ public class Tp1 {
                 source[i] = 'C';
                 nCanibalSource++;
             }
-            destiny[i] = 'N';
+            destiny[i] = '-';
         }
     }
 
