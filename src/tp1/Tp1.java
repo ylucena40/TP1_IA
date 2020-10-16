@@ -201,6 +201,4 @@ public class Tp1 {
             destiny[i] = '-';
         }
     }
-/*Thiago gostoso HB20, irmão pródigo do Tinhoso
-funciona essa porra logo!!!!!*/
 }
