@@ -42,28 +42,33 @@ public class Tp1 {
             print();
             int i = 7;
             int j = 7;
-            while (i > 6 || j > 6) {
+            while (i > 5 || j > 5) {
                 i = scanner.nextInt();
                 j = scanner.nextInt();
-                if (i < 0 || j < 0) {
-                    i = 7;
-                    j = 7;
-                    System.out.println("Digite novamente");
-                } else {
-                    if (goRet % 2 == 0) {
-                        if (source[i] == 'N' || source[j] == 'N') {
-                            i = 7;
-                            j = 7;
-                            System.out.println("Digite novamente, escolha de posicao sem ngm");
-                        }
+                if(i < 6 && j < 6){
+                    if (i < 0 || j < 0) {
+                        i = 7;
+                        j = 7;
+                        System.out.println("Digite novamente");
                     } else {
-                        if (destiny[i] == 'N' || destiny[j] == 'N') {
-                            i = 7;
-                            j = 7;
-                            System.out.println("Digite novamente, escolha de posicao sem ngm");
+                        if (goRet % 2 == 0) {
+                            if (source[i] == 'N' || source[j] == 'N') {
+                                i = 7;
+                                j = 7;
+                                System.out.println("Digite novamente, escolha de posicao sem ngm");
+                            }
+                        } else {
+                            if (destiny[i] == 'N' || destiny[j] == 'N') {
+                                i = 7;
+                                j = 7;
+                                System.out.println("Digite novamente, escolha de posicao sem ngm");
+                            }
                         }
-                    }
 
+                    }
+                }
+                else{
+                    System.out.println("Digite novamente, posicao invalida");
                 }
             }
             cross(i, j);
