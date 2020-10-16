@@ -42,7 +42,7 @@ public class Tp1 {
             print();
             int i = 7;
             int j = 7;
-            while (i > 6 && j > 6) {
+            while (i > 6 || j > 6) {
                 i = scanner.nextInt();
                 j = scanner.nextInt();
                 if (i < 0 || j < 0) {
