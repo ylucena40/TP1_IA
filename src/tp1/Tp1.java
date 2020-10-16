@@ -77,9 +77,8 @@ public class Tp1 {
                 System.out.println("Voce perdeu, numero de Canibais maior que o de missionarios");
                 break;
             }
-        
-            System.out.println("Parabens, voce venceu");
-
+        }
+        System.out.println("Parabens, voce venceu!");
     }
 
     public static void cross(int i, int j) {
