@@ -2,7 +2,6 @@ package tp1;
 
 import java.util.Scanner;
 
-
 public class Tp1 {
 
     static char source[] = new char[6];
@@ -13,12 +12,17 @@ public class Tp1 {
     static int nCanibalDestiny = 0;
     static int goRet = 0;
 
-
     public static void main(String[] args) {
         // TODO code application logic here
+
+        //setPerson();
+        //play();
+
+    }
+
+    public static void play() {
         Scanner scanner = new Scanner(System.in);
 
-        setPerson();
         while (nMissionarioSource > 0 || nCanibalSource > 0) {
             System.out.println("Digite o numero de pelo menos 1 passageiro para o barco passar para o outro lado do rio");
             System.out.println("Caso for mandar apenas um, digite duas vezes o mesmo numero");
@@ -35,7 +39,7 @@ public class Tp1 {
             while (i > 5 || j > 5) {
                 i = scanner.nextInt();
                 j = scanner.nextInt();
-                if(i < 6 && j < 6){
+                if (i < 6 && j < 6) {
                     if (i < 0 || j < 0) {
                         i = 7;
                         j = 7;
@@ -56,14 +60,13 @@ public class Tp1 {
                         }
 
                     }
-                }
-                else{
+                } else {
                     System.out.println("Digite novamente, posicao invalida");
                 }
             }
             cross(i, j);
             goRet++;
-            if(rules() == 1){
+            if (rules() == 1) {
                 System.out.println("Voce perdeu, numero de Canibais maior que o de missionarios");
                 break;
             }
@@ -75,33 +78,30 @@ public class Tp1 {
         if (goRet % 2 == 0) {
             if (i == j) {
                 destiny[i] = source[i];
-                if(source[i] == 'M'){
+                if (source[i] == 'M') {
                     nMissionarioSource--;
                     nMissionarioDestiny++;
-                }
-                else{
+                } else {
                     nCanibalSource--;
                     nCanibalDestiny++;
                 }
                 source[i] = '-';
-                
+
             } else {
                 destiny[i] = source[i];
-                if(source[i] == 'M'){
+                if (source[i] == 'M') {
                     nMissionarioSource--;
                     nMissionarioDestiny++;
-                }
-                else{
+                } else {
                     nCanibalSource--;
                     nCanibalDestiny++;
                 }
                 source[i] = '-';
                 destiny[j] = source[j];
-                if(source[j] == 'M'){
+                if (source[j] == 'M') {
                     nMissionarioSource--;
                     nMissionarioDestiny++;
-                }
-                else{
+                } else {
                     nCanibalSource--;
                     nCanibalDestiny++;
                 }
@@ -110,32 +110,29 @@ public class Tp1 {
         } else {
             if (i == j) {
                 source[i] = destiny[i];
-                if(destiny[i] == 'M'){
+                if (destiny[i] == 'M') {
                     nMissionarioDestiny--;
                     nMissionarioSource++;
-                }
-                else{
+                } else {
                     nCanibalDestiny--;
                     nCanibalSource++;
                 }
                 destiny[i] = '-';
             } else {
                 source[i] = destiny[i];
-                if(destiny[i] == 'M'){
+                if (destiny[i] == 'M') {
                     nMissionarioDestiny--;
                     nMissionarioSource++;
-                }
-                else{
+                } else {
                     nCanibalDestiny--;
                     nCanibalSource++;
                 }
                 destiny[i] = '-';
                 source[j] = destiny[j];
-                if(destiny[j] == 'M'){
+                if (destiny[j] == 'M') {
                     nMissionarioDestiny--;
                     nMissionarioSource++;
-                }
-                else{
+                } else {
                     nCanibalDestiny--;
                     nCanibalSource++;
                 }
