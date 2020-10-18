@@ -1,16 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package tp1;
 
 import java.util.Scanner;
 
-/**
- *
- * @author Yanlu
- */
+
 public class Tp1 {
 
     static char source[] = new char[6];
@@ -21,9 +13,7 @@ public class Tp1 {
     static int nCanibalDestiny = 0;
     static int goRet = 0;
 
-    /**
-     * @param args the command line arguments
-     */
+
     public static void main(String[] args) {
         // TODO code application logic here
         Scanner scanner = new Scanner(System.in);
