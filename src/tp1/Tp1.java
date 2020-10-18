@@ -11,13 +11,23 @@ public class Tp1 {
     static int nMissionarioDestiny = 0;
     static int nCanibalDestiny = 0;
     static int goRet = 0;
+    static No head = new No();
 
     public static void main(String[] args) {
         // TODO code application logic here
 
         //setPerson();
         //play();
-
+        head.setHead(3, 3, 1, 0);
+    }
+    
+    public static void createNo(No recent){
+        if(recent.getSide() == 1){
+            //diminuir
+        }
+        else{
+            //incrementar
+        }
     }
 
     public static void play() {
