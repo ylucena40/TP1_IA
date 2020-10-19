@@ -53,7 +53,9 @@ public class No {
     public ArrayList<No> getFilhos() {
         return filhos;
     }
-    
+    public void setFilhos(No filhos){
+        this.filhos = new ArrayList<No>();
+    }
     public void setHead(int mis, int can, int side, int deep){
         this.missionario = mis;
         this.canibal = can;
