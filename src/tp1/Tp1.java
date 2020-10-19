@@ -19,15 +19,21 @@ public class Tp1 {
         //setPerson();
         //play();
         head.setHead(3, 3, 1, 0);
+        createGraph(head);
+        System.out.println("pf nn entre em loop");
     }
 
-    public static void createGraph(No recent){
-        if(validateCreateNo(recent) > 1){
+    public static void createGraph(No recent) {
+        if (validateCreateNo(recent) > 1) {
             createNo(recent);
+            for (int i = 0; i < recent.getFilhos().size(); i++) {
+                createGraph(recent.getFilhos().get(i));
+            }
         }
-        
+        return;
+
     }
-    
+
     public static int validateCreateNo(No recent) {
         int n = 0;
         if (recent.getSide() == 1) {
