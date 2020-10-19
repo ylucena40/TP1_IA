@@ -21,7 +21,12 @@ public class Tp1 {
         //play();
         head.setHead(3, 3, 1, 0);
         createGraph(head);
+        
         System.out.println("pf nn entre em loop");
+    }
+    
+    public static void iterativeDeepning(No head){
+        
     }
 
     public static void createGraph(No recent) {
