@@ -12,6 +12,7 @@ public class Tp1 {
     static int nCanibalDestiny = 0;
     static int goRet = 0;
     static No head = new No();
+    static boolean createNo = true;
 
     public static void main(String[] args) {
         // TODO code application logic here
@@ -32,6 +33,18 @@ public class Tp1 {
         }
         return;
 
+    }
+    
+    public static void validateNoEqual(No recent, No newNo){
+        for(int i = 0; i < recent.getFilhos().size(); i++){
+            if(recent.getMissionario() == newNo.getMissionario() 
+                    && recent.getCanibal() == newNo.getCanibal()
+                    && recent.getSide() == newNo.getSide()){
+                createNo = false;
+                return;
+            }
+            validateNoEqual(recent.getFilhos().get(i),newNo);
+        }
     }
 
     public static int validateCreateNo(No recent) {
@@ -98,7 +111,11 @@ public class Tp1 {
                 newNo.setSide(0);
                 newNo.setDeep(recent.getDeep() + 1);
                 newNo.setFilhos(newNo);
-                recent.getFilhos().add(newNo);
+                validateNoEqual(head,newNo);
+                if(createNo){
+                    recent.getFilhos().add(newNo);
+                }
+                createNo = true;
             }
 
             //
@@ -109,7 +126,11 @@ public class Tp1 {
                 newNo.setSide(0);
                 newNo.setDeep(recent.getDeep() + 1);
                 newNo.setFilhos(newNo);
-                recent.getFilhos().add(newNo);
+                validateNoEqual(head,newNo);
+                if(createNo){
+                    recent.getFilhos().add(newNo);
+                }
+                createNo = true;
             }
 
             //
@@ -120,7 +141,11 @@ public class Tp1 {
                 newNo.setSide(0);
                 newNo.setDeep(recent.getDeep() + 1);
                 newNo.setFilhos(newNo);
-                recent.getFilhos().add(newNo);
+                validateNoEqual(head,newNo);
+                if(createNo){
+                    recent.getFilhos().add(newNo);
+                }
+                createNo = true;
             }
 
             //
@@ -131,7 +156,11 @@ public class Tp1 {
                 newNo.setSide(0);
                 newNo.setDeep(recent.getDeep() + 1);
                 newNo.setFilhos(newNo);
-                recent.getFilhos().add(newNo);
+                validateNoEqual(head,newNo);
+                if(createNo){
+                    recent.getFilhos().add(newNo);
+                }
+                createNo = true;
             }
             //
             if (recent.getMissionario() > 0 && recent.getCanibal() > 0) {
@@ -141,7 +170,11 @@ public class Tp1 {
                 newNo.setSide(0);
                 newNo.setDeep(recent.getDeep() + 1);
                 newNo.setFilhos(newNo);
-                recent.getFilhos().add(newNo);
+                validateNoEqual(head,newNo);
+                if(createNo){
+                    recent.getFilhos().add(newNo);
+                }
+                createNo = true;
             }
 
         } else {
@@ -153,7 +186,11 @@ public class Tp1 {
                 newNo.setSide(1);
                 newNo.setDeep(recent.getDeep() + 1);
                 newNo.setFilhos(newNo);
-                recent.getFilhos().add(newNo);
+                validateNoEqual(head,newNo);
+                if(createNo){
+                    recent.getFilhos().add(newNo);
+                }
+                createNo = true;
             }
 
             //
@@ -164,7 +201,11 @@ public class Tp1 {
                 newNo.setSide(1);
                 newNo.setDeep(recent.getDeep() + 1);
                 newNo.setFilhos(newNo);
-                recent.getFilhos().add(newNo);
+                validateNoEqual(head,newNo);
+                if(createNo){
+                    recent.getFilhos().add(newNo);
+                }
+                createNo = true;
             }
 
             //
@@ -175,7 +216,11 @@ public class Tp1 {
                 newNo.setSide(1);
                 newNo.setDeep(recent.getDeep() + 1);
                 newNo.setFilhos(newNo);
-                recent.getFilhos().add(newNo);
+                validateNoEqual(head,newNo);
+                if(createNo){
+                    recent.getFilhos().add(newNo);
+                }
+                createNo = true;
             }
 
             //
@@ -186,7 +231,11 @@ public class Tp1 {
                 newNo.setSide(1);
                 newNo.setDeep(recent.getDeep() + 1);
                 newNo.setFilhos(newNo);
-                recent.getFilhos().add(newNo);
+                validateNoEqual(head,newNo);
+                if(createNo){
+                    recent.getFilhos().add(newNo);
+                }
+                createNo = true;
             }
             //
             if (recent.getMissionario() < 3 && recent.getCanibal() < 3) {
@@ -196,7 +245,11 @@ public class Tp1 {
                 newNo.setSide(1);
                 newNo.setDeep(recent.getDeep() + 1);
                 newNo.setFilhos(newNo);
-                recent.getFilhos().add(newNo);
+                validateNoEqual(head,newNo);
+                if(createNo){
+                    recent.getFilhos().add(newNo);
+                }
+                createNo = true;
             }
         }
     }
