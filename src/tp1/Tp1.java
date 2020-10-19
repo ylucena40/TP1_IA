@@ -22,6 +22,60 @@ public class Tp1 {
         createNo(head);
     }
 
+    public static int validateCreateNo(No recent) {
+        int n = 0;
+        if (recent.getSide() == 1) {
+            if (recent.getMissionario() > 0) {
+                n++;
+            }
+
+            //
+            if (recent.getCanibal() > 0) {
+                n++;
+            }
+
+            //
+            if (recent.getMissionario() > 1) {
+                n++;
+            }
+
+            //
+            if (recent.getCanibal() > 1) {
+                n++;
+            }
+            //
+            if (recent.getMissionario() > 0 && recent.getCanibal() > 0) {
+                n++;
+            }
+
+        } else {
+            if (recent.getMissionario() < 3) {
+                n++;
+            }
+
+            //
+            if (recent.getCanibal() < 3) {
+                n++;
+            }
+
+            //
+            if (recent.getMissionario() < 2) {
+                n++;
+            }
+
+            //
+            if (recent.getCanibal() < 2) {
+                n++;
+            }
+            //
+            if (recent.getMissionario() < 3 && recent.getCanibal() < 3) {
+                n++;
+            }
+        }
+
+        return n;
+    }
+
     public static void createNo(No recent) {
         No newNo = new No();
         if (recent.getSide() == 1) {
