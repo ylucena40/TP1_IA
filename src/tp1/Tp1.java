@@ -16,8 +16,6 @@ public class Tp1 {
         No prev = new No();
         prev.setHead(-1, -1, -1, -1);
         createGraph(head, prev);
-
-        System.out.println("pf nn entre em loop");
     }
 
     public static void createGraph(No recent, No prev) {
