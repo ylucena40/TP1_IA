@@ -20,7 +20,6 @@ public class Tp1 {
         //play();
         head.setHead(3, 3, 1, 0);
         createNo(head);
-        System.out.println("aqui");
     }
 
     public static void createNo(No recent) {
