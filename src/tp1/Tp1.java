@@ -97,6 +97,7 @@ public class Tp1 {
                 newNo.setCanibal(recent.getCanibal());
                 newNo.setSide(0);
                 newNo.setDeep(recent.getDeep() + 1);
+                newNo.setFilhos(newNo);
                 recent.getFilhos().add(newNo);
             }
 
@@ -107,6 +108,7 @@ public class Tp1 {
                 newNo.setCanibal(recent.getCanibal() - 1);
                 newNo.setSide(0);
                 newNo.setDeep(recent.getDeep() + 1);
+                newNo.setFilhos(newNo);
                 recent.getFilhos().add(newNo);
             }
 
@@ -117,6 +119,7 @@ public class Tp1 {
                 newNo.setCanibal(recent.getCanibal());
                 newNo.setSide(0);
                 newNo.setDeep(recent.getDeep() + 1);
+                newNo.setFilhos(newNo);
                 recent.getFilhos().add(newNo);
             }
 
@@ -127,6 +130,7 @@ public class Tp1 {
                 newNo.setCanibal(recent.getCanibal() - 2);
                 newNo.setSide(0);
                 newNo.setDeep(recent.getDeep() + 1);
+                newNo.setFilhos(newNo);
                 recent.getFilhos().add(newNo);
             }
             //
@@ -136,6 +140,7 @@ public class Tp1 {
                 newNo.setCanibal(recent.getCanibal() - 1);
                 newNo.setSide(0);
                 newNo.setDeep(recent.getDeep() + 1);
+                newNo.setFilhos(newNo);
                 recent.getFilhos().add(newNo);
             }
 
@@ -147,6 +152,7 @@ public class Tp1 {
                 newNo.setCanibal(recent.getCanibal());
                 newNo.setSide(1);
                 newNo.setDeep(recent.getDeep() + 1);
+                newNo.setFilhos(newNo);
                 recent.getFilhos().add(newNo);
             }
 
@@ -157,6 +163,7 @@ public class Tp1 {
                 newNo.setCanibal(recent.getCanibal() + 1);
                 newNo.setSide(1);
                 newNo.setDeep(recent.getDeep() + 1);
+                newNo.setFilhos(newNo);
                 recent.getFilhos().add(newNo);
             }
 
@@ -167,6 +174,7 @@ public class Tp1 {
                 newNo.setCanibal(recent.getCanibal());
                 newNo.setSide(1);
                 newNo.setDeep(recent.getDeep() + 1);
+                newNo.setFilhos(newNo);
                 recent.getFilhos().add(newNo);
             }
 
@@ -177,6 +185,7 @@ public class Tp1 {
                 newNo.setCanibal(recent.getCanibal() + 2);
                 newNo.setSide(1);
                 newNo.setDeep(recent.getDeep() + 1);
+                newNo.setFilhos(newNo);
                 recent.getFilhos().add(newNo);
             }
             //
@@ -186,6 +195,7 @@ public class Tp1 {
                 newNo.setCanibal(recent.getCanibal() + 1);
                 newNo.setSide(1);
                 newNo.setDeep(recent.getDeep() + 1);
+                newNo.setFilhos(newNo);
                 recent.getFilhos().add(newNo);
             }
         }
