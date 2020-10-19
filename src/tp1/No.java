@@ -16,7 +16,7 @@ public class No {
     private int canibal;
     private int side;
     private int deep;
-    private ArrayList<No> filhos;
+    private No filhos;
 
     public int getMissionario() {
         return missionario;
@@ -50,17 +50,21 @@ public class No {
         this.deep = deep;
     }
 
-    public ArrayList<No> getFilhos() {
+    public No getFilhos() {
         return filhos;
     }
-    public void setFilhos(No filhos){
-        this.filhos = new ArrayList<No>();
+
+    public void setFilhos(No filhos) {
+        this.filhos = filhos;
     }
+    
+    
+    
     public void setHead(int mis, int can, int side, int deep){
         this.missionario = mis;
         this.canibal = can;
         this.side = side;
         this.deep = deep;
-        this.filhos = new ArrayList<No>();
+        this.filhos = null;
     }
 }
