@@ -19,9 +19,15 @@ public class Tp1 {
         //setPerson();
         //play();
         head.setHead(3, 3, 1, 0);
-        createNo(head);
     }
 
+    public static void createGraph(No recent){
+        if(validateCreateNo(recent) > 1){
+            createNo(recent);
+        }
+        
+    }
+    
     public static int validateCreateNo(No recent) {
         int n = 0;
         if (recent.getSide() == 1) {
