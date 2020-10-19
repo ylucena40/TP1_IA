@@ -37,6 +37,7 @@ public class Tp1 {
 
             //
             if (recent.getCanibal() > 0) {
+                newNo = new No();
                 newNo.setMissionario(recent.getMissionario());
                 newNo.setCanibal(recent.getCanibal() - 1);
                 newNo.setSide(0);
@@ -46,6 +47,7 @@ public class Tp1 {
 
             //
             if (recent.getMissionario() > 1) {
+                newNo = new No();
                 newNo.setMissionario(recent.getMissionario() - 2);
                 newNo.setCanibal(recent.getCanibal());
                 newNo.setSide(0);
@@ -55,6 +57,7 @@ public class Tp1 {
 
             //
             if (recent.getCanibal() > 1) {
+                newNo = new No();
                 newNo.setMissionario(recent.getMissionario());
                 newNo.setCanibal(recent.getCanibal() - 2);
                 newNo.setSide(0);
@@ -63,6 +66,7 @@ public class Tp1 {
             }
             //
             if (recent.getMissionario() > 0 && recent.getCanibal() > 0) {
+                newNo = new No();
                 newNo.setMissionario(recent.getMissionario() - 1);
                 newNo.setCanibal(recent.getCanibal() - 1);
                 newNo.setSide(0);
@@ -73,6 +77,7 @@ public class Tp1 {
         } else {
             //incrementar
             if (recent.getMissionario() < 3) {
+                newNo = new No();
                 newNo.setMissionario(recent.getMissionario() + 1);
                 newNo.setCanibal(recent.getCanibal());
                 newNo.setSide(1);
@@ -82,6 +87,7 @@ public class Tp1 {
 
             //
             if (recent.getCanibal() < 3) {
+                newNo = new No();
                 newNo.setMissionario(recent.getMissionario());
                 newNo.setCanibal(recent.getCanibal() + 1);
                 newNo.setSide(1);
@@ -91,6 +97,7 @@ public class Tp1 {
 
             //
             if (recent.getMissionario() < 2) {
+                newNo = new No();
                 newNo.setMissionario(recent.getMissionario() + 2);
                 newNo.setCanibal(recent.getCanibal());
                 newNo.setSide(1);
@@ -100,6 +107,7 @@ public class Tp1 {
 
             //
             if (recent.getCanibal() < 2) {
+                newNo = new No();
                 newNo.setMissionario(recent.getMissionario());
                 newNo.setCanibal(recent.getCanibal() + 2);
                 newNo.setSide(1);
@@ -108,6 +116,7 @@ public class Tp1 {
             }
             //
             if (recent.getMissionario() < 3 && recent.getCanibal() < 3) {
+                newNo = new No();
                 newNo.setMissionario(recent.getMissionario() + 1);
                 newNo.setCanibal(recent.getCanibal() + 1);
                 newNo.setSide(1);
