@@ -19,14 +19,101 @@ public class Tp1 {
         //setPerson();
         //play();
         head.setHead(3, 3, 1, 0);
+        createNo(head);
+        System.out.println("aqui");
     }
-    
-    public static void createNo(No recent){
-        if(recent.getSide() == 1){
+
+    public static void createNo(No recent) {
+        No newNo = new No();
+        if (recent.getSide() == 1) {
             //diminuir
-        }
-        else{
+            if (recent.getMissionario() > 0) {
+                newNo.setMissionario(recent.getMissionario() - 1);
+                newNo.setCanibal(recent.getCanibal());
+                newNo.setSide(0);
+                newNo.setDeep(recent.getDeep() + 1);
+                recent.getFilhos().add(newNo);
+            }
+
+            //
+            if (recent.getCanibal() > 0) {
+                newNo.setMissionario(recent.getMissionario());
+                newNo.setCanibal(recent.getCanibal() - 1);
+                newNo.setSide(0);
+                newNo.setDeep(recent.getDeep() + 1);
+                recent.getFilhos().add(newNo);
+            }
+
+            //
+            if (recent.getMissionario() > 1) {
+                newNo.setMissionario(recent.getMissionario() - 2);
+                newNo.setCanibal(recent.getCanibal());
+                newNo.setSide(0);
+                newNo.setDeep(recent.getDeep() + 1);
+                recent.getFilhos().add(newNo);
+            }
+
+            //
+            if (recent.getCanibal() > 1) {
+                newNo.setMissionario(recent.getMissionario());
+                newNo.setCanibal(recent.getCanibal() - 2);
+                newNo.setSide(0);
+                newNo.setDeep(recent.getDeep() + 1);
+                recent.getFilhos().add(newNo);
+            }
+            //
+            if (recent.getMissionario() > 0 && recent.getCanibal() > 0) {
+                newNo.setMissionario(recent.getMissionario() - 1);
+                newNo.setCanibal(recent.getCanibal() - 1);
+                newNo.setSide(0);
+                newNo.setDeep(recent.getDeep() + 1);
+                recent.getFilhos().add(newNo);
+            }
+
+        } else {
             //incrementar
+            if (recent.getMissionario() < 3) {
+                newNo.setMissionario(recent.getMissionario() + 1);
+                newNo.setCanibal(recent.getCanibal());
+                newNo.setSide(1);
+                newNo.setDeep(recent.getDeep() + 1);
+                recent.getFilhos().add(newNo);
+            }
+
+            //
+            if (recent.getCanibal() < 3) {
+                newNo.setMissionario(recent.getMissionario());
+                newNo.setCanibal(recent.getCanibal() + 1);
+                newNo.setSide(1);
+                newNo.setDeep(recent.getDeep() + 1);
+                recent.getFilhos().add(newNo);
+            }
+
+            //
+            if (recent.getMissionario() < 2) {
+                newNo.setMissionario(recent.getMissionario() + 2);
+                newNo.setCanibal(recent.getCanibal());
+                newNo.setSide(1);
+                newNo.setDeep(recent.getDeep() + 1);
+                recent.getFilhos().add(newNo);
+            }
+
+            //
+            if (recent.getCanibal() < 2) {
+                newNo.setMissionario(recent.getMissionario());
+                newNo.setCanibal(recent.getCanibal() + 2);
+                newNo.setSide(1);
+                newNo.setDeep(recent.getDeep() + 1);
+                recent.getFilhos().add(newNo);
+            }
+            //
+            if (recent.getMissionario() < 3 && recent.getCanibal() < 3) {
+                newNo.setMissionario(recent.getMissionario() + 1);
+                newNo.setCanibal(recent.getCanibal() + 1);
+                newNo.setSide(1);
+                newNo.setDeep(recent.getDeep() + 1);
+                recent.getFilhos().add(newNo);
+            }
         }
     }
 
