@@ -12,11 +12,11 @@ import java.util.ArrayList;
  * @author Yanlu
  */
 public class No {
-    private int missionario;
-    private int canibal;
-    private int side;
-    private int deep;
-    private ArrayList<No> filhos;
+    private int missionario; //numero de missionario
+    private int canibal; // numero de canibais 
+    private int side; // lado do rio, sendo 1 o lado direito e 0 o lado esquerdo
+    private int deep; // profundidade da árvore
+    private ArrayList<No> filhos; // lista de filhos que um estado pode ter
 
     public int getMissionario() {
         return missionario;
